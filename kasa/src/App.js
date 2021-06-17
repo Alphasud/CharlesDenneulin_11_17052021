@@ -29,8 +29,6 @@ export default class App extends Component {
   }
   render() {
     
-    console.log(this.state.datas.map(el => el.id));
-    
     if (this.state.error) {
       console.log(this.state.error);
       return <p>{this.state.error.message}</p>;

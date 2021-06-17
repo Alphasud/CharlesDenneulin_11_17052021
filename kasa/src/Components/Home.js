@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Thumb from "./Thumb";
+import Banner from "./Banner";
+import Accommodation from "./Accommodation";
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -10,7 +12,10 @@ export default class Home extends Component {
   }
     render() {
         return (
-            <Thumb datas={this.state.datas}/>
+            <main>
+                <Banner />
+                <Accommodation datas={this.state.datas} />
+            </main>
         )
     }
 }
