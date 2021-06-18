@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
+import Gallery from "./Gallery";
 
 class AccommodationPage extends Component {
     constructor(props) {
@@ -11,13 +12,16 @@ class AccommodationPage extends Component {
     };
     render() {
         return (
-            <div>
+            <>
               {this.state.singleAccommodation.map(el => {
-                    return (
-                        <h1 key={el.id}>{el.title}</h1>
+                  return (
+                    <main key={el.id}>
+                          <Gallery datas = {this.state.singleAccommodation}/>
+                        <h1>{el.title}</h1>
+                    </main>
                          )
                 })}
-            </div>
+            </>
         )
     };
     

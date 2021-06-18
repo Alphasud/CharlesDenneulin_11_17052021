@@ -120,3 +120,40 @@ $text-color-red: #ff6060;
 
     a {display: contents;}
 }
+
+/////GALLERY//////
+.gallery {
+    width: 100%;
+    height: 30rem;
+    &__image {
+        border-radius: 5px;        
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    
+    }
+    
+    &__arrow-left {
+        position: absolute;
+        left: 5rem;
+        top: 22.5rem;
+        font-size: 5rem;
+        color: rgba($text-color-white, 0.9);
+        cursor: pointer;
+        transition: all .2s ease-in;
+        &:hover{font-size: 5.5rem;}
+    }
+
+    &__arrow-right {
+        position: absolute;
+        right: 5rem;
+        top: 22.5rem;
+        font-size: 5rem;
+        color: rgba($text-color-white, 0.9);
+        cursor: pointer;
+        transition: all .2s ease-in;
+        &:hover{font-size: 5.5rem;}
+    }
+    
+}
