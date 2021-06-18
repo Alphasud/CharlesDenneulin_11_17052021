@@ -1,5 +1,9 @@
 ////FONT//////
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/////COLORS/////
+$text-color-white: #fff;
+$text-color-red: #ff6060;
+
 /////RESET/////
 *,
 *::after,
@@ -17,6 +21,8 @@ body {
     box-sizing: border-box;
     cursor: default;
     font-family: 'Montserrat', sans-serif;
+    color: $text-color-red;
+    font-size: 1.2rem;
     margin: 0 4rem;
 }
 
@@ -34,9 +40,23 @@ a {
 .active {
     text-decoration: underline;
 }
-/////COLORS/////
-$text-color-white: #fff;
-$text-color-red: #ff6060;
+/////PAGE NOT FOUNT////
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin-top: 25%;
+        margin-bottom: 2.5rem;
+        font-size: 12.5rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 10rem;
+    }
+}
 
 //////HEADER//////
 .header {
@@ -90,17 +110,17 @@ $text-color-red: #ff6060;
 /////HOME PAGE/////
 .home__cards {
     width: 100%;
-    padding: 2rem;
+    padding: 3% 1% 0 1%;
     background-color: #f6f6f6 ;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     &__thumb {
         height: 15rem;
-        width: 32%;
-        margin-bottom: 2rem;
+        width: 30%;
+        margin: 0rem 1% 3% 2%;
         border-radius: 5px;
 
         img {
@@ -154,6 +174,43 @@ $text-color-red: #ff6060;
         cursor: pointer;
         transition: all .2s ease-in;
         &:hover{font-size: 5.5rem;}
+    } 
+}
+//////ACCOMMODATION PAGE///////
+.accommodation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &__left-side {
+       &__title {
+        font-weight: 500;
+        font-size: 2rem;
+    } 
+    &__location {
+        margin-top: .5rem;
     }
-    
+    }
+
+    &__right-side {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__host {
+            margin-right: .5rem;
+            line-height: 2rem;
+        }
+        &__host__firstname {
+            text-align: end;
+        }
+        &__host__lastname {
+            text-align: end;
+        }
+
+        img {
+            border-radius: 100px;
+            width: 5rem;
+        }
+    }
 }
