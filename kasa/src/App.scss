@@ -214,3 +214,20 @@ a {
         }
     }
 }
+
+////////TAG///////
+.tags {
+    display: flex;
+    margin-top: 1.5rem;
+    &__item {
+        border-radius: 10px;
+        background-color: $text-color-red;
+        color: $text-color-white;
+        padding: .3rem 1rem;
+        font-weight: 500;
+        
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
