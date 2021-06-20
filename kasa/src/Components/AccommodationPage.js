@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
+import NoMatch from "./NoMatch";
 import Gallery from "./Gallery";
 import Tag from "./Tag";
 
@@ -9,9 +10,12 @@ class AccommodationPage extends Component {
         this.state = {
             datas: this.props.datas,
             singleAccommodation: this.props.datas.filter(elemnt => elemnt.id === this.props.match.params.accommodationId),
+            allId: this.props.datas.map(elemnt => elemnt.id),
         };
     };
     render() {
+        if (!this.state.allId.some((ele) => ele === this.props.match.params.accommodationId)) return <NoMatch />;
+
         return (
             <>
               {this.state.singleAccommodation.map(el => {

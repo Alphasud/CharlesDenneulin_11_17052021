@@ -15,8 +15,8 @@ export default class Tag extends Component {
                 {this.state.datas.map(function(ele) {
                     return (
                         <div key={ele.id} className="tags">
-                            {ele.tags.map(e => {
-                            return <p className="tags__item">{e}</p>
+                            {ele.tags.map((e, index) => {
+                            return <p key={index} className="tags__item">{e}</p>
                             })}
                         </div>
                     )
