@@ -439,15 +439,15 @@ a {
         background-color: $color-gray;
         border-radius: 5px;
         padding: 0 1.5rem;
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         transition: height .2s ease-in-out;
         &--open {
             background-color: $color-gray;
             border-radius: 5px;
-            height: 15rem;
+            max-height: 20rem;
             padding: 0 1.5rem;
-            transition: height .2s ease-in-out;            
+            transition: max-height .2s ease-in-out;            
         }
     }
     &__text {
@@ -489,15 +489,15 @@ a {
         background-color: $color-gray;
         border-radius: 5px;
         padding: 0 1.5rem;
-        height: 0;
+        max-height: 0;
         overflow: hidden;
-        transition: height .2s ease-in-out;
+        transition: max-height .2s ease-in-out;
         &--open {
             background-color: $color-gray;
             border-radius: 5px;
-            height: 15rem;
+            max-height: 15rem;
             padding: 0 1.5rem;
-            transition: height .2s ease-in-out;            
+            transition: max-height .2s ease-in-out;            
         }
     }
     &__text {
