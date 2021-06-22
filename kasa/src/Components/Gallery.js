@@ -36,10 +36,10 @@ export default class Gallery extends Component {
                 {this.state.arrayLength > 1 ?
                     <div>
                         <span className="gallery__arrow-left" onClick={this.previousSlide}>
-                            <i className="fas fa-chevron-left"></i>
+                            <i className="fas fa-chevron-left fa-7x"></i>
                         </span>
                         <span className="gallery__arrow-right" onClick={this.nextSlide}>
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-right fa-7x"></i>
                         </span>
                     </div> :
                     <div></div>

@@ -3,6 +3,7 @@
 /////COLORS/////
 $text-color-white: #fff;
 $text-color-red: #ff6060;
+$color-gray: #f6f6f6;
 
 /////RESET/////
 *,
@@ -23,7 +24,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: $text-color-red;
     font-size: 1.2rem;
-    margin: 0 4rem;
+}
+
+main {
+    margin: 0 5rem;
 }
 
 a {
@@ -60,7 +64,7 @@ a {
 
 //////HEADER//////
 .header {
-    margin: 2rem 0;
+    margin: 2rem 5rem;
     display: flex;
 
     &__logo {
@@ -86,11 +90,32 @@ a {
 }
 
 //////BANNER//////
-.banner {
+.banner-homepage {
     width: 100%;
     height: 15rem;
-    border-radius: 5px;
+    border-radius: 10px;
     background-image: url('http://localhost:3000/images/homepage_banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #595959;
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        color: $text-color-white;
+        font-weight: 500;
+        font-size: 2.4rem;
+    }
+}
+.banner-aboutpage {
+    width: 100%;
+    height: 15rem;
+    border-radius: 10px;
+    background-image: url('http://localhost:3000/images/aboutpage_banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-color: #595959;
@@ -144,7 +169,7 @@ a {
 /////GALLERY//////
 .gallery {
     width: 100%;
-    height: 30rem;
+    height: 40rem;
     &__image {
         border-radius: 5px;        
         width: 100%;
@@ -156,28 +181,28 @@ a {
     
     &__arrow-left {
         position: absolute;
-        left: 5rem;
-        top: 22.5rem;
-        font-size: 5rem;
+        left: 6rem;
+        top: 27.5rem;
+        //font-size: 5rem;
         color: rgba($text-color-white, 0.9);
         cursor: pointer;
-        transition: all .2s ease-in;
-        &:hover{font-size: 5.5rem;}
+        transition: transform .2s ease-in;
+        &:hover{transform: scale(1.3);}
     }
 
     &__arrow-right {
         position: absolute;
-        right: 5rem;
-        top: 22.5rem;
-        font-size: 5rem;
+        right: 6rem;
+        top: 27.5rem;
+        //font-size: 5rem;
         color: rgba($text-color-white, 0.9);
         cursor: pointer;
-        transition: all .2s ease-in;
-        &:hover{font-size: 5.5rem;}
+        transition: transform .2s ease-in;
+        &:hover{transform: scale(1.3);}
     } 
 }
 //////ACCOMMODATION PAGE///////
-.accommodation {
+.accommodation-info {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -215,19 +240,218 @@ a {
     }
 }
 
+.tags-ratings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
 ////////TAG///////
 .tags {
     display: flex;
-    margin-top: 1.5rem;
+    align-items: center;
     &__item {
         border-radius: 10px;
         background-color: $text-color-red;
         color: $text-color-white;
         padding: .3rem 1rem;
-        font-weight: 500;
+        font-weight: 400;
         
         &:not(:last-child) {
             margin-right: 1rem;
         }
+    }
+}
+
+////////RATING///////
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 2rem;
+  &::before {
+      content: "\f005 \f005 \f005 \f005 \f005";
+  }
+}
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  font-size: 2rem;
+  &::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: $text-color-red;
+    font-weight: 900;
+  }
+}
+
+.general-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+////////DESCRIPTION///////
+.description {
+    width: 47.5%;
+    overflow: hidden;
+
+    &__header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $text-color-red;
+        border-radius: 5px;
+        color: $text-color-white;
+        padding: 1.5rem 1rem;
+        height: 2.5rem;
+        h4{font-weight: 400;font-size: 1.3rem;}
+    }
+    &__body {
+        background-color: $color-gray;
+        border-radius: 5px;
+        padding: 0 1.5rem;
+        height: 0;
+        overflow: hidden;
+        transition: height .2s ease-in-out;
+        &--open {
+            background-color: $color-gray;
+            border-radius: 5px;
+            height: 15rem;
+            padding: 0 1.5rem;
+            transition: height .2s ease-in-out;            
+        }
+    }
+    &__text {
+        opacity: 0;
+        padding-top: 2rem;
+        transition: opacity .3s ease-in-out; 
+        &--open {
+            opacity: 1;
+            padding-top: 2rem;
+            line-height: 1.4;
+            transition: opacity .3s ease-in-out; 
+        }
+    }
+}
+
+
+//////EQUIPMENTS//////
+.equipments {
+    width: 47.5%;
+    overflow: hidden;
+
+    &__header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $text-color-red;
+        border-radius: 5px;
+        color: $text-color-white;
+        padding: 1.5rem 1rem;
+        height: 2.5rem;
+        h4{font-weight: 400;font-size: 1.3rem;}
+    }
+    &__body {
+        background-color: $color-gray;
+        border-radius: 5px;
+        padding: 0 1.5rem;
+        height: 0;
+        overflow: hidden;
+        transition: height .2s ease-in-out;
+        &--open {
+            background-color: $color-gray;
+            border-radius: 5px;
+            height: 15rem;
+            padding: 0 1.5rem;
+            transition: height .2s ease-in-out;            
+        }
+    }
+    &__text {
+        opacity: 0;
+        padding-top: 2rem;
+        transition: opacity .3s ease-in-out; 
+        &--open {
+            opacity: 1;
+            padding-top: 2rem;
+            transition: opacity .3s ease-in-out; 
+        }
+    }
+    &__list-item {
+        list-style: none;
+        line-height: 1.8rem;
+    }
+}
+
+///////ABOUT///////
+.dropdown {
+    margin: 0 auto;
+    width: 75%;
+    overflow: hidden;
+
+    &__header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $text-color-red;
+        border-radius: 5px;
+        color: $text-color-white;
+        padding: 1.5rem 1rem;
+        height: 2.5rem;
+        h4{font-weight: 400;font-size: 1.3rem;}
+    }
+    &__body {
+        background-color: $color-gray;
+        border-radius: 5px;
+        padding: 0 1.5rem;
+        height: 0;
+        overflow: hidden;
+        transition: height .2s ease-in-out;
+        &--open {
+            background-color: $color-gray;
+            border-radius: 5px;
+            height: 10rem;
+            padding: 0 1.5rem;
+            transition: height .2s ease-in-out;            
+        }
+    }
+    &__text {
+        opacity: 0;
+        padding-top: 2rem;
+        transition: opacity .3s ease-in-out; 
+        &--open {
+            opacity: 1;
+            padding-top: 2rem;
+            line-height: 1.4;
+            transition: opacity .3s ease-in-out; 
+        }
+    }
+}
+
+
+///////FOOTER//////
+.footer {
+    margin-top: 5rem;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+
+    &__logo {
+        img {width: 10rem;}
+    }
+
+    p {
+        margin-top: 2rem;
+        color: $text-color-white;
     }
 }

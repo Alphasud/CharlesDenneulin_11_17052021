@@ -3,6 +3,9 @@ import { withRouter } from "react-router";
 import NoMatch from "./NoMatch";
 import Gallery from "./Gallery";
 import Tag from "./Tag";
+import Rating from "./Rating";
+import Description from "./Description";
+import Equipments from "./Equipments";
 
 class AccommodationPage extends Component {
     constructor(props) {
@@ -22,20 +25,28 @@ class AccommodationPage extends Component {
                   return (
                     <main key={el.id}>
                         <Gallery datas={this.state.singleAccommodation} />
-                        <section className="accommodation">
-                            <div className="accommodation__left-side">
-                                <h1 className="accommodation__left-side__title">{el.title}</h1>
-                                <p className="accommodation__left-side__location">{el.location}</p>
+                        <section className="accommodation-info">
+                            <div className="accommodation-info__left-side">
+                                <h1 className="accommodation-info__left-side__title">{el.title}</h1>
+                                <p className="accommodation-info__left-side__location">{el.location}</p>
                             </div>
-                            <div className="accommodation__right-side">
-                                <div className="accommodation__right-side__host">
-                                    <p className="accommodation__right-side__host__firstname">{el.host.name.split(' ', 1)}</p>
-                                    <p className="accommodation__right-side__host__lastname">{el.host.name.split(' ').pop()}</p>
+                            <div className="accommodation-info__right-side">
+                                <div className="accommodation-info__right-side__host">
+                                    <p className="accommodation-info__right-side__host__firstname">{el.host.name.split(' ', 1)}</p>
+                                    <p className="accommodation-info__right-side__host__lastname">{el.host.name.split(' ').pop()}</p>
                                 </div>
                                 <img src={el.host.picture} alt="Hôte" />
                             </div> 
-                        </section>
-                        <Tag datas={this.state.singleAccommodation}/>
+                          </section>
+                          <section className="tags-ratings">
+                            <Tag datas={this.state.singleAccommodation} />
+                            <Rating datas={this.state.singleAccommodation} />
+                          </section>
+                          <section className="general-info">
+                              <Description datas={this.state.singleAccommodation} />
+                              <Equipments datas={this.state.singleAccommodation} />
+                          </section>
+                          
                     </main>
                          )
                 })}

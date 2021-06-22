@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import NoMatch from "./Components/NoMatch";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import AccommodationPage from "./Components/AccommodationPage"
 
 
@@ -32,6 +33,7 @@ export default class RouteConfig extends Component {
                             <NoMatch />
                         </Route>
                     </Switch>
+                    <Footer />
                 </Router>
             </div>
         );

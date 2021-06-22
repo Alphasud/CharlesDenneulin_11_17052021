@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 
 export default class Banner extends Component {
-    
+    constructor(props) {
+    super(props);
+    this.state = {
+        info : this.props.info,
+    }
+    };
     render() {
         return (
-            <section className='banner'>
-                <h3 className='banner__title'>Chez vous, partout et ailleurs</h3>
+            <section className={this.state.info.type}>
+                <h3 className={this.state.info.type + "__title"}>{this.state.info.text}</h3>
             </section>
         )
     }

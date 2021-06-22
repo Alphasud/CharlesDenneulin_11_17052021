@@ -7,14 +7,18 @@ export default class Home extends Component {
     constructor(props) {
     super(props);
     this.state = {
-      datas: this.props.datas
+      datas: this.props.datas,
+      info: {
+        type: "banner-homepage",
+        text:"Chez vous, partout et ailleurs"
+      }
     }
   }
-    render() {
+  render() {
         return (
             <main>
-                <Banner />
-                <Accommodation datas={this.state.datas} />
+              <Banner info={this.state.info} />
+              <Accommodation datas={this.state.datas} />
             </main>
         )
     }

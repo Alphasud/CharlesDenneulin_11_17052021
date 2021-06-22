@@ -5,13 +5,12 @@ export default class Tag extends Component {
     super(props);
     this.state = {
         datas: this.props.datas,
-        tags: this.props.datas.map(el => el.tags),
     }
     };
 
     render() {
         return (
-            <div>
+            <>
                 {this.state.datas.map(function(ele) {
                     return (
                         <div key={ele.id} className="tags">
@@ -21,7 +20,7 @@ export default class Tag extends Component {
                         </div>
                     )
                 })}
-            </div>
+            </>
         )
     }
 }
