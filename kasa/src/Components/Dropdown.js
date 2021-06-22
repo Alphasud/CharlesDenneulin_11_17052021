@@ -29,7 +29,7 @@ export default class Dropdown extends Component {
     
     render() {
         return (
-            <section>
+            <section className="about-page">
             <article className="dropdown">
                 <div className="dropdown__header" onClick={this.openMenuOne}>
                     <h4>Fiabilité</h4>

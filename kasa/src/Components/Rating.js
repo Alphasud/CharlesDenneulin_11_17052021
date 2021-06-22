@@ -15,8 +15,10 @@ export default class Rating extends Component {
         const percentageRounded = `${(Math.round(percentage / 10) * 10)}%`;
 
         return (
-            <div className="stars-outer">
-                <div className="stars-inner" style={{width: percentageRounded}}></div>   
+            <div className='ratings'>
+                <div className="stars-outer">
+                    <div className="stars-inner" style={{width: percentageRounded}}></div>   
+                </div>
             </div>
         )
     }

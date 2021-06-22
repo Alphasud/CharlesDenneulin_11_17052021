@@ -29,18 +29,18 @@ class AccommodationPage extends Component {
                             <div className="accommodation-info__left-side">
                                 <h1 className="accommodation-info__left-side__title">{el.title}</h1>
                                 <p className="accommodation-info__left-side__location">{el.location}</p>
+                                <Tag datas={this.state.singleAccommodation} />
                             </div>
-                            <div className="accommodation-info__right-side">
-                                <div className="accommodation-info__right-side__host">
-                                    <p className="accommodation-info__right-side__host__firstname">{el.host.name.split(' ', 1)}</p>
-                                    <p className="accommodation-info__right-side__host__lastname">{el.host.name.split(' ').pop()}</p>
+                              <div className="accommodation-info__right-side">
+                                <div className="accommodation-info__right-side__host-info">
+                                    <div className="accommodation-info__right-side__host">
+                                        <p className="accommodation-info__right-side__host__firstname">{el.host.name.split(' ', 1)}</p>
+                                        <p className="accommodation-info__right-side__host__lastname">{el.host.name.split(' ').pop()}</p>
+                                    </div>
+                                    <img src={el.host.picture} alt="Hôte" />
                                 </div>
-                                <img src={el.host.picture} alt="Hôte" />
+                                <Rating datas={this.state.singleAccommodation} />
                             </div> 
-                          </section>
-                          <section className="tags-ratings">
-                            <Tag datas={this.state.singleAccommodation} />
-                            <Rating datas={this.state.singleAccommodation} />
                           </section>
                           <section className="general-info">
                               <Description datas={this.state.singleAccommodation} />
