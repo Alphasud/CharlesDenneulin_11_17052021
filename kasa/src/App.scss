@@ -24,10 +24,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: $text-color-red;
     font-size: 1.2rem;
+    
 }
 
 main {
     margin: 0 5rem;
+    min-height: 75vh;
 }
 
 a {
@@ -391,8 +393,9 @@ a {
 ///////ABOUT///////
 .dropdown {
     margin: 0 auto;
-    width: 75%;
+    width: 80%;
     overflow: hidden;
+    &:not(:last-child){margin-bottom: 2rem;}
 
     &__header {
         cursor: pointer;
@@ -416,7 +419,7 @@ a {
         &--open {
             background-color: $color-gray;
             border-radius: 5px;
-            height: 10rem;
+            max-height: 10rem;
             padding: 0 1.5rem;
             transition: height .2s ease-in-out;            
         }
@@ -428,6 +431,7 @@ a {
         &--open {
             opacity: 1;
             padding-top: 2rem;
+            padding-bottom: 1rem;
             line-height: 1.4;
             transition: opacity .3s ease-in-out; 
         }
@@ -437,6 +441,7 @@ a {
 
 ///////FOOTER//////
 .footer {
+
     margin-top: 5rem;
     width: 100%;
     background-color: #000;
