@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
             <footer className='footer'>
                 <div className='footer__logo'>
-                    <img src="http://localhost:3000/logo-white.png" alt="Logo" />
+                    <img src="https://Alphasud.github.io/CharlesDenneulin_11_17052021/logo-white.png" alt="Logo" />
                 </div>
                 <p>&#169; {new Date().getFullYear()} Kasa. All rights reserved</p>
             </footer>        
