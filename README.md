@@ -3,7 +3,8 @@
 _____________________________________________________________________________________
 **Démarrer l'application :** 
 
-cd CharlesDenneulin_11_17062021
+cd CharlesDenneulin_11_17062021  
+  
 npm start
 
 **Visiter l'application dans votre navigateur à l'adresse suivante :**
