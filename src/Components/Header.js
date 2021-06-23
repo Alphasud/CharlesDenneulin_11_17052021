@@ -8,7 +8,7 @@ export default class Header extends Component {
         return (
             <header className='header'>
                 <div className='header__logo'>
-                    <img src="https://Alphasud.github.io/CharlesDenneulin_11_17062021/LOGO.png" alt="Logo" />
+                    <img src="https://alphasud.github.io/CharlesDenneulin_11_17062021/LOGO.png" alt="Logo" />
                 </div>
                 <div className='header__links'>
                     <NavLink exact activeClassName='active' to="/CharlesDenneulin_11_17062021/">Accueil</NavLink>

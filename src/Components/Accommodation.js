@@ -13,7 +13,7 @@ export default class Accommodation extends Component {
             <section className='home__cards'>
                 {this.state.datas.map(el => {
                     return (
-                        <Link to={`/CharlesDenneulin_11_17052021/accommodation/${el.id}`} key={el.id}>
+                        <Link to={`/CharlesDenneulin_11_17062021/accommodation/${el.id}`} key={el.id}>
                             <article className='home__cards__thumb'>
                                 <img src={el.cover} alt={el.title} />
                                 <p className='home__cards__thumb__title'>{el.title}</p>
