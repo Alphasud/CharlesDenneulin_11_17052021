@@ -16,8 +16,10 @@ export default class About extends Component {
     render() {
         return(
             <main>
+              <div className="about">
                 <Banner info={this.state.info} />
                 <Dropdown />
+              </div>
             </main>
         )
     }
