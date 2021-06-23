@@ -16,7 +16,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch('https://Alphasud.github.io/CharlesDenneulin_11_17052021/hotels.json')
+    fetch('https://Alphasud.github.io/CharlesDenneulin_11_17062021/hotels.json')
       .then(response => {
         if (response.ok) {
           return response.json();
