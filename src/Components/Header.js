@@ -11,8 +11,8 @@ export default class Header extends Component {
                     <img src="https://Alphasud.github.io/CharlesDenneulin_11_17052021/LOGO.png" alt="Logo" />
                 </div>
                 <div className='header__links'>
-                    <NavLink exact activeClassName='active' to="/">Accueil</NavLink>
-                    <NavLink activeClassName='active' to="/about">A Propos</NavLink>
+                    <NavLink exact activeClassName='active' to="/CharlesDenneulin_11_17052021/">Accueil</NavLink>
+                    <NavLink activeClassName='active' to="/CharlesDenneulin_11_17052021/about">A Propos</NavLink>
                 </div>
             </header>        
         )

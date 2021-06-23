@@ -7,7 +7,7 @@ export default class NoMatch extends Component {
             <section className="page-not-found">
                 <h1>404</h1>
                 <p>Oups! La page que vous demandez n'existe pas.</p>
-                <NavLink to="/">Retourner sur la page d'accueil</NavLink>
+                <NavLink to="/CharlesDenneulin_11_17052021/">Retourner sur la page d'accueil</NavLink>
             </section>
             
 
