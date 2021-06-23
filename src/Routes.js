@@ -20,13 +20,13 @@ export default class RouteConfig extends Component {
                 <Router>
                     <Header />
                     <Switch>
-                        <Route exact path="/CharlesDenneulin_11_17062021/">
+                        <Route exact path="/">
                             <Home datas={this.props.datas}/>
                         </Route>
-                        <Route path="/CharlesDenneulin_11_17062021/about">
+                        <Route path="/about">
                             <About />
                         </Route>
-                        <Route path="/CharlesDenneulin_11_17062021/accommodation/:accommodationId">
+                        <Route path="/accommodation/:accommodationId">
                             <AccommodationPage datas={this.props.datas}/>
                         </Route>
                         <Route path="*">
