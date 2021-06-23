@@ -5,9 +5,11 @@ export default class NoMatch extends Component {
     render() {
         return (
             <section className="page-not-found">
-                <h1>404</h1>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
-                <NavLink to="/CharlesDenneulin_11_17052021/">Retourner sur la page d'accueil</NavLink>
+                <div className="page-not-found__content">
+                    <h1>404</h1>
+                    <p>Oups! La page que vous demandez n'existe pas.</p>
+                    <NavLink to="/CharlesDenneulin_11_17052021/">Retourner sur la page d'accueil</NavLink>
+                </div>
             </section>
             
 
