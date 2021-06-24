@@ -32,6 +32,9 @@ export default class RouteConfig extends Component {
                         <Route path="*">
                             <NoMatch />
                         </Route>
+                        <Route path="/404">
+                            <NoMatch />
+                        </Route>
                     </Switch>
                     <Footer />
                 </Router>

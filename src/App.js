@@ -35,7 +35,7 @@ export default class App extends Component {
     }
  
     if (this.state.isLoading) {
-      return <p>Loading ...</p>;
+      return <p className="loading">Loading ...</p>;
     }
 
     
