@@ -8,7 +8,7 @@ export default class Header extends Component {
         return (
             <header className='header'>
                 <div className='header__logo'>
-                    <img src="http://192.168.1.31:3000/LOGO.png" alt="Logo" />
+                    <img src={`${process.env.PUBLIC_URL}/LOGO.png`} alt="Logo" />
                 </div>
                 <div className='header__links'>
                     <NavLink exact activeClassName='active' to="/">Accueil</NavLink>

@@ -16,7 +16,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch('http://192.168.1.31:3000/hotels.json')
+    fetch(`${process.env.PUBLIC_URL}/hotels.json`)
       .then(response => {
         if (response.ok) {
           return response.json();
