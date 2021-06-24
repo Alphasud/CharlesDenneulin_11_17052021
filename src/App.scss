@@ -51,6 +51,9 @@ a {
 .active {
     text-decoration: underline;
 }
+
+
+
 /////PAGE NOT FOUNT////
 .page-not-found {
 
@@ -86,6 +89,7 @@ a {
     margin: 0rem 5rem;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 
     &__logo {
         width: 80%;
