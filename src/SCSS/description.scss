@@ -1,4 +1,4 @@
-////////DESCRIPTION///////
+////////DESCRIPTION AND EQUIPMENT///////
 .general-info {
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,7 @@
 }
 
 
-.description {
+.dropdown-accom-page {
     width: 47.5%;
     overflow: hidden;
         @media screen and (max-width: 600px) {
@@ -20,7 +20,7 @@
             margin-bottom: 2rem;
         }
 
-
+    li {list-style: none; line-height: 1.6;}
     &__header {
         cursor: pointer;
         display: flex;
@@ -45,7 +45,8 @@
             border-radius: 5px;
             max-height: 20rem;
             padding: 0 1.5rem;
-            transition: max-height .2s ease-in-out;            
+            transition: max-height .2s ease-in-out; 
+            margin-bottom: 2rem;           
         }
     }
     &__text {

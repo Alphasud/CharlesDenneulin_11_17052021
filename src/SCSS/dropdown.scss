@@ -1,11 +1,12 @@
-//////EQUIPMENTS//////
-.equipments {
-    width: 47.5%;
+.dropdown {
+    margin: 0 auto;
+    width: 80%;
     overflow: hidden;
+    margin-bottom: 2rem;
+
         @media screen and (max-width: 600px) {
             width: 100%;
         }
-
 
     &__header {
         cursor: pointer;
@@ -25,13 +26,13 @@
         padding: 0 1.5rem;
         max-height: 0;
         overflow: hidden;
-        transition: max-height .2s ease-in-out;
+        transition: max-height .2s ease;
         &--open {
             background-color: $color-gray;
             border-radius: 5px;
             max-height: 20rem;
             padding: 0 1.5rem;
-            transition: max-height .2s ease-in-out;            
+            transition: max-height .2s ease;            
         }
     }
     &__text {
@@ -40,12 +41,10 @@
         transition: opacity .3s ease-in-out; 
         &--open {
             opacity: 1;
-            padding: 2rem 0;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            line-height: 1.4;
             transition: opacity .3s ease-in-out; 
         }
-    }
-    &__list-item {
-        list-style: none;
-        line-height: 1.8rem;
     }
 }

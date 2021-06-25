@@ -4,8 +4,7 @@ import NoMatch from "./NoMatch";
 import Gallery from "./Gallery";
 import Tag from "./Tag";
 import Rating from "./Rating";
-import Description from "./Description";
-import Equipments from "./Equipments";
+import Dropdown from "./Dropdown";
 
 class AccommodationPage extends Component {
     constructor(props) {
@@ -14,8 +13,22 @@ class AccommodationPage extends Component {
             datas: this.props.datas,
             singleAccommodation: this.props.datas.filter(elemnt => elemnt.id === this.props.match.params.accommodationId),
             allId: this.props.datas.map(elemnt => elemnt.id),
-        };
+            textOne: {
+                title: "Description",
+                body: (this.props.datas.filter(elemnt => elemnt.id === this.props.match.params.accommodationId)).map(elmnt => elmnt.description),
+            },
+
+            textTwo: {
+                title: "Equipements",
+                body: (this.props.datas.filter(elemnt => elemnt.id === this.props.match.params.accommodationId)).map((el => el.equipments.map((el, index) => {
+                        return <li className="equipments__list-item" key={index}>{el}</li>
+                    }))),
+            },
+            class: "dropdown-accom-page",
+        }
+    
     };
+    
     render() {
         if (!this.state.allId.some((ele) => ele === this.props.match.params.accommodationId)) return <NoMatch />;
 
@@ -43,8 +56,8 @@ class AccommodationPage extends Component {
                             </div> 
                           </section>
                           <section className="general-info">
-                              <Description datas={this.state.singleAccommodation} />
-                              <Equipments datas={this.state.singleAccommodation} />
+                              <Dropdown text={this.state.textOne} class={this.state.class} />
+                              <Dropdown text={this.state.textTwo} class={this.state.class}/>
                           </section>
                           
                     </main>
